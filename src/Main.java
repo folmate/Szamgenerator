@@ -25,12 +25,11 @@ public class Main {
 				}
 			}
 			if(need%6==0)
-				System.out.println(need+" szam lesz generalva a start parancs beirasa utan.");
-			else
+				go=true;
+			else {
 				System.out.println("A szam nem oszthato hattal! Irjon be uj szamot, ha modosiatani szeretne a mennyiseget vagy a start parancsot az "+need+" szam generalasahoz.");
-			in = Console.readLine();
-			if(in.equalsIgnoreCase("start")) 
-				go = true;	
+				in = Console.readLine();
+			}	
 		}
 		//start generating numbers
 		FillUsed();
@@ -54,7 +53,7 @@ public class Main {
 			System.out.println(i);
 		
 		go = false;
-		System.out.println("A mentes parancs beirasaval a szamok bekerulnek a hasznaltak koze es elmentodnek kulon fajlokba.");
+		System.out.println("A *mentes* parancs beirasaval a szamok bekerulnek a hasznaltak koze es elmentodnek kulon fajlokba.");
 		in = Console.readLine();
 		while(!go) {
 			if(in.equalsIgnoreCase("mentes")) 
